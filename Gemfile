@@ -7,6 +7,7 @@ ruby '2.6.10'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
+gem 'active_storage_validations', '0.8.2'
 #Use bootstrap
 gem 'bootstrap-sass', '3.4.1'
 # Use Puma as the app server
@@ -34,6 +35,10 @@ gem 'bootstrap-will_paginate', '1.0.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+gem 'image_processing', '1.9.3'
+gem 'mini_magick', '4.9.5'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -65,6 +70,7 @@ end
 
 group :production do
   gem 'pg', '1.1.4'
+  gem 'aws-sdk-s3', '1.46.0', require: false
 end
 
 
